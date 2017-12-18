@@ -8,6 +8,14 @@ import {SearchComponent} from './search/search.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {ProductComponent} from './product/product.component';
 import {StarsComponent} from './stars/stars.component';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {HomeComponent} from './home/home.component';
+import {Routes, RouterModule} from "@angular/router";
+
+const routeConfig: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'product/:prodTitle', component: ProductDetailComponent},
+];
 
 @NgModule({
   declarations: [
@@ -17,10 +25,13 @@ import {StarsComponent} from './stars/stars.component';
     SearchComponent,
     CarouselComponent,
     ProductComponent,
-    StarsComponent
+    StarsComponent,
+    ProductDetailComponent,
+    HomeComponent
   ], //只能 组件 指令 管道
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routeConfig)
   ],//依赖模块
   providers: [],   //只能是服务
   bootstrap: [AppComponent]
