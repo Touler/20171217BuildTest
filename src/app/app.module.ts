@@ -11,10 +11,11 @@ import {StarsComponent} from './stars/stars.component';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {HomeComponent} from './home/home.component';
 import {Routes, RouterModule} from "@angular/router";
+import {ProductService} from "./shared/product.service";
 
 const routeConfig: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'product/:prodTitle', component: ProductDetailComponent},
+  {path: 'product/:productId', component: ProductDetailComponent},
 ];
 
 @NgModule({
@@ -33,7 +34,7 @@ const routeConfig: Routes = [
     BrowserModule,
     RouterModule.forRoot(routeConfig)
   ],//依赖模块
-  providers: [],   //只能是服务
+  providers: [ProductService],   //只能是服务
   bootstrap: [AppComponent]
 })
 export class AppModule {
