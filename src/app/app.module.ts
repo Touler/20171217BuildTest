@@ -12,6 +12,9 @@ import {ProductDetailComponent} from './product-detail/product-detail.component'
 import {HomeComponent} from './home/home.component';
 import {Routes, RouterModule} from "@angular/router";
 import {ProductService} from "./shared/product.service";
+import {MultiplePipe} from './pipe/multiple.pipe';
+import {ReactiveFormsModule} from "@angular/forms";
+import { FilterPipe } from './pipe/filter.pipe';
 
 const routeConfig: Routes = [
   {path: '', component: HomeComponent},
@@ -28,11 +31,14 @@ const routeConfig: Routes = [
     ProductComponent,
     StarsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    MultiplePipe,
+    FilterPipe
   ], //只能 组件 指令 管道
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routeConfig)
+    RouterModule.forRoot(routeConfig),
+    ReactiveFormsModule
   ],//依赖模块
   providers: [ProductService],   //只能是服务
   bootstrap: [AppComponent]
