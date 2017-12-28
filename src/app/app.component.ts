@@ -10,6 +10,8 @@ declare let $: any;
 export class AppComponent {
   title = 'app works!';
 
+  greeting: string = 'greetingName';
+  user: {name: string} = {name: 'userName'};
   searchInput: FormControl = new FormControl();
 
   constructor() {

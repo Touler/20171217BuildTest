@@ -13,8 +13,9 @@ import {HomeComponent} from './home/home.component';
 import {Routes, RouterModule} from "@angular/router";
 import {ProductService} from "./shared/product.service";
 import {MultiplePipe} from './pipe/multiple.pipe';
-import {ReactiveFormsModule} from "@angular/forms";
-import { FilterPipe } from './pipe/filter.pipe';
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
+import {FilterPipe} from './pipe/filter.pipe';
+import {LifeComponent} from './life/life.component';
 
 const routeConfig: Routes = [
   {path: '', component: HomeComponent},
@@ -33,9 +34,11 @@ const routeConfig: Routes = [
     ProductDetailComponent,
     HomeComponent,
     MultiplePipe,
-    FilterPipe
+    FilterPipe,
+    LifeComponent
   ], //只能 组件 指令 管道
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routeConfig),
     ReactiveFormsModule

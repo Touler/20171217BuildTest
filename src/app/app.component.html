@@ -12,4 +12,6 @@
 </div>
 <app-footer></app-footer>
 <input type="text" [formControl]="searchInput">
-
+<input type="text" [(ngModel)]="greeting">
+<input type="text" [(ngModel)]="user.name">
+<app-life [name]="title" [greeting]="greeting" [user]="user"></app-life>
