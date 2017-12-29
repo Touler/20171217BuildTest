@@ -40,7 +40,7 @@ export class LifeComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,
   }
 
   ngDoCheck(): void {
-    this.logIt("ngDoCheck");
+    /*this.logIt("ngDoCheck");*/
   }
 
   ngAfterContentInit(): void {
@@ -48,7 +48,7 @@ export class LifeComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,
   }
 
   ngAfterContentChecked(): void {
-    this.logIt("ngAfterContentChecked");
+    /*this.logIt("ngAfterContentChecked");*/
   }
 
   ngAfterViewInit(): void {
@@ -56,7 +56,7 @@ export class LifeComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,
   }
 
   ngAfterViewChecked(): void {
-    this.logIt("ngAfterViewChecked");
+   /* this.logIt("ngAfterViewChecked");*/
   }
 
   ngOnDestroy(): void {

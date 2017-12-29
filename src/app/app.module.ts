@@ -16,10 +16,13 @@ import {MultiplePipe} from './pipe/multiple.pipe';
 import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 import {FilterPipe} from './pipe/filter.pipe';
 import {LifeComponent} from './life/life.component';
+import {TestComponent} from './test/test.component';
+import { ReactiveComponent } from './test/reactive/reactive.component';
 
 const routeConfig: Routes = [
   {path: '', component: HomeComponent},
   {path: 'product/:productId', component: ProductDetailComponent},
+  {path: 'test', component: TestComponent},
 ];
 
 @NgModule({
@@ -35,7 +38,9 @@ const routeConfig: Routes = [
     HomeComponent,
     MultiplePipe,
     FilterPipe,
-    LifeComponent
+    LifeComponent,
+    TestComponent,
+    ReactiveComponent
   ], //只能 组件 指令 管道
   imports: [
     FormsModule,
